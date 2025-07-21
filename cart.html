@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Chetana's Watch Store</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .cart-container {
+            margin-top: 80px;
+            padding: 40px 20px;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        .cart-item-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .cart-item-details {
+            flex-grow: 1;
+        }
+        .cart-item-remove {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Chetana's Watch Store</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/products.html">Products</a></li>
+                <li><a href="pages/blog.html">Blog</a></li>
+                <li><a href="pages/research.html">Research</a></li>
+                <li><a href="pages/about.html">About Us</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cart-container container">
+            <h1 class="section-title">Your Shopping Cart</h1>
+            <div id="cart-items-container"></div>
+            <div id="cart-total"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Chetana's Watch Store. All rights reserved. | Designed by Chetana Malla</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cartItemsContainer = document.getElementById('cart-items-container');
+            const cartTotalContainer = document.getElementById('cart-total');
+            let cartItems = JSON.parse(localStorage.getItem('watchStoreCart')) || [];
+
+            function renderCart() {
+                cartItemsContainer.innerHTML = '';
+                if (cartItems.length === 0) {
+                    cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+                    cartTotalContainer.innerHTML = '';
+                    return;
+                }
+
+                let total = 0;
+                cartItems.forEach((item, index) => {
+                    const itemElement = document.createElement('div');
+                    itemElement.className = 'cart-item';
+                    itemElement.innerHTML = `
+                        <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                        <div class="cart-item-details">
+                            <h3>${item.name}</h3>
+                            <p>Price: ${item.price}</p>
+                            <p>Quantity: ${item.quantity}</p>
+                        </div>
+                        <button class="cart-item-remove" data-index="${index}">Remove</button>
+                    `;
+                    cartItemsContainer.appendChild(itemElement);
+                    const price = parseFloat(item.price.replace(/[^0-9.-]+/g,""));
+                    total += price * item.quantity;
+                });
+
+                cartTotalContainer.innerHTML = `<h3>Total: $${total.toFixed(2)}</h3>`;
+
+                document.querySelectorAll('.cart-item-remove').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const index = e.target.dataset.index;
+                        cartItems.splice(index, 1);
+                        localStorage.setItem('watchStoreCart', JSON.stringify(cartItems));
+                        renderCart();
+                    });
+                });
+            }
+
+            renderCart();
+        });
+    </script>
+</body>
+</html>
