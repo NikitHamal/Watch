@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart - Chetana's Watch Store</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Shopping Cart - Watch Store</title>
+    <link rel="stylesheet" href="../css/styles.css">
     <style>
         .cart-container {
             margin-top: 80px;
@@ -41,13 +41,12 @@
 <body>
     <header>
         <nav class="container">
-            <div class="logo">Chetana's Watch Store</div>
+            <div class="logo">Watch Store</div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/products.html">Products</a></li>
-                <li><a href="pages/blog.html">Blog</a></li>
-                <li><a href="pages/research.html">Research</a></li>
-                <li><a href="pages/about.html">About Us</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About Us</a></li>
                 <li><a href="cart.html">Cart</a></li>
             </ul>
         </nav>
@@ -63,7 +62,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Chetana's Watch Store. All rights reserved. | Designed by Chetana Malla</p>
+            <p>&copy; 2025 Watch Store. All rights reserved. | Designed by Chetana Malla</p>
         </div>
     </footer>
 
@@ -86,7 +85,7 @@
                     const itemElement = document.createElement('div');
                     itemElement.className = 'cart-item';
                     itemElement.innerHTML = `
-                        <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                        <img src="../${item.image}" alt="${item.name}" class="cart-item-image">
                         <div class="cart-item-details">
                             <h3>${item.name}</h3>
                             <p>Price: ${item.price}</p>
