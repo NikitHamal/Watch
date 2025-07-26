@@ -1,3 +1,8 @@
+/* External CSS for Chetana's Watch Store - Main Styles */
+/* Author: Chetana Malla */
+/* Course: Introduction to Information Systems */
+
+/* Global Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,16 +10,17 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f8f9fa;
 }
 
+/* Header and Navigation Styles */
 header {
-    background: #2c3e50;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
     color: white;
-    padding: 10px 0;
+    padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -35,7 +41,7 @@ nav {
 }
 
 .logo {
-    font-size: 28px;
+    font-size: 1.8rem;
     font-weight: bold;
     color: #ecf0f1;
 }
@@ -43,13 +49,15 @@ nav {
 .nav-links {
     display: flex;
     list-style: none;
+    gap: 2rem;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    padding: 10px 15px;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
 }
 
@@ -58,13 +66,15 @@ nav {
     background-color: rgba(255,255,255,0.1);
 }
 
+/* Main Content Styles */
 main {
     margin-top: 80px;
     min-height: calc(100vh - 160px);
 }
 
+/* Hero Section */
 .hero {
-    background: #333;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/featured_watches.jpg');
     background-size: cover;
     background-position: center;
     height: 500px;
@@ -76,13 +86,15 @@ main {
 }
 
 .hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 16px;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .hero-content p {
-    font-size: 18px;
-    margin-bottom: 32px;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 .btn {
@@ -93,30 +105,35 @@ main {
     text-decoration: none;
     border-radius: 25px;
     font-weight: bold;
+    transition: all 0.3s ease;
     border: none;
     cursor: pointer;
 }
 
 .btn:hover {
     background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+/* Section Styles */
 .section {
-    padding: 64px 0;
+    padding: 4rem 0;
 }
 
 .section-title {
     text-align: center;
-    font-size: 40px;
-    margin-bottom: 48px;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
     color: #2c3e50;
 }
 
+/* Product Grid */
 .product-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
-    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .product-card {
@@ -124,7 +141,12 @@ main {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    width: calc(33.333% - 22px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .product-image {
@@ -134,31 +156,32 @@ main {
 }
 
 .product-info {
-    padding: 24px;
+    padding: 1.5rem;
 }
 
 .product-title {
-    font-size: 20px;
-    margin-bottom: 8px;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
     color: #2c3e50;
 }
 
 .product-price {
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: bold;
     color: #e74c3c;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
 
 .original-price {
     text-decoration: line-through;
     color: #7f8c8d;
-    margin-left: 8px;
+    margin-left: 0.5rem;
 }
 
+/* Form Styles */
 .form-container {
     background: white;
-    padding: 32px;
+    padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     max-width: 600px;
@@ -166,12 +189,12 @@ main {
 }
 
 .form-group {
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
     font-weight: bold;
     color: #2c3e50;
 }
@@ -183,7 +206,8 @@ main {
     padding: 12px;
     border: 2px solid #ddd;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
 }
 
 .form-group input:focus,
@@ -193,6 +217,7 @@ main {
     border-color: #3498db;
 }
 
+/* Table Styles */
 .data-table {
     width: 100%;
     border-collapse: collapse;
@@ -204,7 +229,7 @@ main {
 
 .data-table th,
 .data-table td {
-    padding: 16px;
+    padding: 1rem;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
@@ -219,10 +244,51 @@ main {
     background-color: #f8f9fa;
 }
 
+/* Footer Styles */
 footer {
     background: #2c3e50;
     color: white;
     text-align: center;
-    padding: 32px 0;
-    margin-top: 64px;
+    padding: 2rem 0;
+    margin-top: 4rem;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+

@@ -1,12 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for SEO and responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Chetana's Watch Store</title>
+    <meta name="description" content="Browse our extensive collection of luxury, vintage, sports, and smart watches. Premium timepieces with detailed specifications and competitive pricing.">
+    <meta name="keywords" content="watch products, luxury watches, vintage watches, sports watches, smartwatches, timepieces, Nepal">
+    <meta name="author" content="Chetana Malla">
+    
+    <!-- Page title -->
+    <title>Products - Chetana's Watch Store | Premium Watch Collection</title>
+    
+    <!-- External CSS -->
     <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- Internal CSS for products page specific styles -->
+    <style>
+        /* Products page specific internal CSS styles */
+        .products-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+        }
+        
+        .filter-section {
+            background: white;
+            padding: 2rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .filter-controls {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .filter-select {
+            padding: 8px 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .price-range {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .price-input {
+            width: 80px;
+            padding: 8px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .product-details {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .product-specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .spec-item {
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 3px solid #3498db;
+        }
+        
+        .rating-stars {
+            color: #f39c12;
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+        
+        .product-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn-secondary {
+            background: #95a5a6;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #7f8c8d;
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #e74c3c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .product-card {
+            position: relative;
+        }
+    </style>
 </head>
 <body>
+    <!-- Header with navigation -->
     <header>
         <nav class="container">
             <div class="logo">Chetana's Watch Store</div>
@@ -16,92 +136,382 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="../cart.html">Cart</a></li>
             </ul>
+            <button class="nav-toggle" style="display: none;">☰</button>
         </nav>
     </header>
 
+    <!-- Main content -->
     <main>
+        <!-- Products header -->
+        <section class="products-header">
+            <div class="container">
+                <h1>Our Watch Collection</h1>
+                <p>Discover premium timepieces crafted for every lifestyle and occasion</p>
+            </div>
+        </section>
+
+        <!-- Filter section -->
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="category-filter">Category:</label>
+                        <select id="category-filter" class="filter-select">
+                            <option value="all">All Categories</option>
+                            <option value="luxury">Luxury</option>
+                            <option value="vintage">Vintage</option>
+                            <option value="sports">Sports</option>
+                            <option value="smart">Smart Watches</option>
+                            <option value="women">Women's</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="brand-filter">Brand:</label>
+                        <select id="brand-filter" class="filter-select">
+                            <option value="all">All Brands</option>
+                            <option value="rolex">Rolex</option>
+                            <option value="omega">Omega</option>
+                            <option value="seiko">Seiko</option>
+                            <option value="casio">Casio</option>
+                            <option value="apple">Apple</option>
+                        </select>
+                    </div>
+                    
+                    <div class="price-range">
+                        <label>Price Range:</label>
+                        <input type="number" id="min-price" class="price-input" placeholder="Min" min="0">
+                        <span>-</span>
+                        <input type="number" id="max-price" class="price-input" placeholder="Max" min="0">
+                        <button class="btn" onclick="applyPriceFilter()">Filter</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products grid -->
         <section class="section">
             <div class="container">
-                <h1 class="section-title">Our Watch Collection</h1>
-                <div class="product-grid">
-                    <div class="product-card" data-product-id="lux-001">
+                <div class="product-grid" id="products-grid">
+                    <!-- Luxury Watch 1 -->
+                    <div class="product-card" data-product-id="lux-001" data-category="luxury" data-brand="rolex">
+                        <div class="product-badge">Best Seller</div>
                         <img src="../images/luxury_collection.jpg" alt="Rolex Submariner" class="product-image">
                         <div class="product-info">
                             <h3 class="product-title">Rolex Submariner Classic</h3>
+                            <div class="rating-stars">★★★★★</div>
                             <p class="product-price">$8,999 <span class="original-price">$9,999</span></p>
-                            <p>Iconic diving watch with exceptional water resistance and timeless design.</p>
-                            <button class="btn add-to-cart">Add to Cart</button>
-                            <button class="btn view-details">View Details</button>
+                            <p>Iconic diving watch with exceptional water resistance and timeless design. Swiss automatic movement with 48-hour power reserve.</p>
+                            <div class="product-actions">
+                                <button class="btn add-to-cart">Add to Cart</button>
+                                <button class="btn btn-secondary">View Details</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="product-card" data-product-id="vin-001">
+                    <!-- Vintage Watch 1 -->
+                    <div class="product-card" data-product-id="vin-001" data-category="vintage" data-brand="omega">
                         <img src="../images/vintage_collection.jpg" alt="Omega Speedmaster Vintage" class="product-image">
                         <div class="product-info">
                             <h3 class="product-title">Omega Speedmaster Vintage 1969</h3>
+                            <div class="rating-stars">★★★★☆</div>
                             <p class="product-price">$3,499 <span class="original-price">$3,999</span></p>
-                            <p>Authentic vintage moonwatch with original caliber 861 movement.</p>
-                            <button class="btn add-to-cart">Add to Cart</button>
-                            <button class="btn view-details">View Details</button>
+                            <p>Authentic vintage moonwatch with original caliber 861 movement. Collector's piece with documented history and provenance.</p>
+                            <div class="product-actions">
+                                <button class="btn add-to-cart">Add to Cart</button>
+                                <button class="btn btn-secondary">View Details</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="product-card" data-product-id="smt-001">
+                    <!-- Smart Watch 1 -->
+                    <div class="product-card" data-product-id="smt-001" data-category="smart" data-brand="apple">
+                        <div class="product-badge">New Arrival</div>
                         <img src="../images/smartwatch_banner.jpg" alt="Apple Watch Ultra" class="product-image">
                         <div class="product-info">
                             <h3 class="product-title">Apple Watch Ultra Series 9</h3>
+                            <div class="rating-stars">★★★★★</div>
                             <p class="product-price">$799 <span class="original-price">$899</span></p>
-                            <p>Advanced health monitoring, GPS tracking, and cellular connectivity.</p>
-                            <button class="btn add-to-cart">Add to Cart</button>
-                            <button class="btn view-details">View Details</button>
+                            <p>Advanced health monitoring, GPS tracking, and cellular connectivity. Titanium case with Action Button and Digital Crown.</p>
+                            <div class="product-actions">
+                                <button class="btn add-to-cart">Add to Cart</button>
+                                <button class="btn btn-secondary">View Details</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="product-card" data-product-id="spt-001">
+                    <!-- Sports Watch 1 -->
+                    <div class="product-card" data-product-id="spt-001" data-category="sports" data-brand="casio">
                         <img src="../images/sports_watch.jpg" alt="Casio G-Shock" class="product-image">
                         <div class="product-info">
                             <h3 class="product-title">Casio G-Shock Mudmaster</h3>
+                            <div class="rating-stars">★★★★☆</div>
                             <p class="product-price">$299 <span class="original-price">$349</span></p>
-                            <p>Rugged construction with mud resistance, solar power, and multi-band atomic timekeeping.</p>
-                            <button class="btn add-to-cart">Add to Cart</button>
-                            <button class="btn view-details">View Details</button>
+                            <p>Rugged construction with mud resistance, solar power, and multi-band atomic timekeeping. Perfect for outdoor adventures.</p>
+                            <div class="product-actions">
+                                <button class="btn add-to-cart">Add to Cart</button>
+                                <button class="btn btn-secondary">View Details</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="product-card" data-product-id="wmn-001">
+                    <!-- Women's Watch 1 -->
+                    <div class="product-card" data-product-id="wmn-001" data-category="women" data-brand="seiko">
                         <img src="../images/women_watches.jpg" alt="Seiko Prospex Solar" class="product-image">
                         <div class="product-info">
                             <h3 class="product-title">Seiko Prospex Solar Elegance</h3>
+                            <div class="rating-stars">★★★★★</div>
                             <p class="product-price">$449 <span class="original-price">$549</span></p>
-                            <p>Elegant solar-powered timepiece with mother-of-pearl dial and diamond hour markers.</p>
-                            <button class="btn add-to-cart">Add to Cart</button>
-                            <button class="btn view-details">View Details</button>
+                            <p>Elegant solar-powered timepiece with mother-of-pearl dial and diamond hour markers. Water resistant to 100 meters.</p>
+                            <div class="product-actions">
+                                <button class="btn add-to-cart">Add to Cart</button>
+                                <button class="btn btn-secondary">View Details</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="product-card" data-product-id="lux-002">
+                    <!-- Luxury Watch 2 -->
+                    <div class="product-card" data-product-id="lux-002" data-category="luxury" data-brand="omega">
                         <img src="../images/luxury_collection.jpg" alt="Omega Seamaster" class="product-image">
                         <div class="product-info">
                             <h3 class="product-title">Omega Seamaster Planet Ocean</h3>
+                            <div class="rating-stars">★★★★★</div>
                             <p class="product-price">$5,299 <span class="original-price">$5,799</span></p>
-                            <p>Professional diving watch with Co-Axial Master Chronometer movement.</p>
-                            <button class="btn add-to-cart">Add to Cart</button>
-                            <button class="btn view-details">View Details</button>
+                            <p>Professional diving watch with Co-Axial Master Chronometer movement. Helium escape valve and ceramic bezel.</p>
+                            <div class="product-actions">
+                                <button class="btn add-to-cart">Add to Cart</button>
+                                <button class="btn btn-secondary">View Details</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Product specifications section -->
+        <section class="section">
+            <div class="container">
+                <div class="product-details">
+                    <h2>Watch Specifications Comparison</h2>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Luxury</th>
+                                <th>Vintage</th>
+                                <th>Smart</th>
+                                <th>Sports</th>
+                                <th>Women's</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Movement Type</td>
+                                <td>Swiss Automatic</td>
+                                <td>Mechanical</td>
+                                <td>Digital/Quartz</td>
+                                <td>Solar/Digital</td>
+                                <td>Solar/Quartz</td>
+                            </tr>
+                            <tr>
+                                <td>Water Resistance</td>
+                                <td>300m</td>
+                                <td>50m</td>
+                                <td>50m</td>
+                                <td>200m</td>
+                                <td>100m</td>
+                            </tr>
+                            <tr>
+                                <td>Case Material</td>
+                                <td>Stainless Steel</td>
+                                <td>Stainless Steel</td>
+                                <td>Titanium</td>
+                                <td>Resin/Steel</td>
+                                <td>Stainless Steel</td>
+                            </tr>
+                            <tr>
+                                <td>Power Reserve</td>
+                                <td>48 hours</td>
+                                <td>40 hours</td>
+                                <td>18 hours</td>
+                                <td>Solar powered</td>
+                                <td>Solar powered</td>
+                            </tr>
+                            <tr>
+                                <td>Special Features</td>
+                                <td>Diving bezel</td>
+                                <td>Chronograph</td>
+                                <td>Health monitoring</td>
+                                <td>Shock resistant</td>
+                                <td>Diamond markers</td>
+                            </tr>
+                            <tr>
+                                <td>Warranty</td>
+                                <td>5 years</td>
+                                <td>2 years</td>
+                                <td>1 year</td>
+                                <td>2 years</td>
+                                <td>3 years</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact form section -->
+        <section class="section" style="background: #f8f9fa;">
+            <div class="container">
+                <h2 class="section-title">Need Help Choosing?</h2>
+                <div class="form-container">
+                    <form id="product-inquiry-form">
+                        <div class="form-group">
+                            <label for="customer-name">Full Name</label>
+                            <input type="text" id="customer-name" name="customer-name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customer-email">Email Address</label>
+                            <input type="email" id="customer-email" name="customer-email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customer-phone">Phone Number</label>
+                            <input type="tel" id="customer-phone" name="customer-phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="watch-preference">Watch Preference</label>
+                            <select id="watch-preference" name="watch-preference" required>
+                                <option value="">Select Category</option>
+                                <option value="luxury">Luxury Watches</option>
+                                <option value="vintage">Vintage Collection</option>
+                                <option value="smart">Smart Watches</option>
+                                <option value="sports">Sports Watches</option>
+                                <option value="women">Women's Watches</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget-range">Budget Range</label>
+                            <select id="budget-range" name="budget-range" required>
+                                <option value="">Select Budget</option>
+                                <option value="under-500">Under $500</option>
+                                <option value="500-1000">$500 - $1,000</option>
+                                <option value="1000-3000">$1,000 - $3,000</option>
+                                <option value="3000-5000">$3,000 - $5,000</option>
+                                <option value="above-5000">Above $5,000</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="inquiry-message">Message</label>
+                            <textarea id="inquiry-message" name="inquiry-message" rows="4" placeholder="Tell us about your preferences and requirements..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2025 Chetana's Watch Store. All rights reserved. | Designed by Chetana Malla</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                <!-- Inline CSS for footer links -->
+                <span style="color: #3498db;">Email:</span> chetana.malla@student.islington.edu.np | 
+                <span style="color: #3498db;">Phone:</span> +977-9876543210
+            </p>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="../js/script.js"></script>
+    
+    <!-- Additional inline JavaScript for products page functionality -->
+    <script>
+        // Products page specific JavaScript functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Filter functionality
+            const categoryFilter = document.getElementById('category-filter');
+            const brandFilter = document.getElementById('brand-filter');
+            
+            categoryFilter.addEventListener('change', applyFilters);
+            brandFilter.addEventListener('change', applyFilters);
+            
+            // Product inquiry form
+            const inquiryForm = document.getElementById('product-inquiry-form');
+            if (inquiryForm) {
+                inquiryForm.addEventListener('submit', handleProductInquiry);
+            }
+        });
+        
+        // Apply filters function
+        function applyFilters() {
+            const categoryValue = document.getElementById('category-filter').value;
+            const brandValue = document.getElementById('brand-filter').value;
+            const productCards = document.querySelectorAll('.product-card');
+            
+            let visibleCount = 0;
+            
+            productCards.forEach(card => {
+                const cardCategory = card.dataset.category;
+                const cardBrand = card.dataset.brand;
+                
+                const categoryMatch = categoryValue === 'all' || cardCategory === categoryValue;
+                const brandMatch = brandValue === 'all' || cardBrand === brandValue;
+                
+                if (categoryMatch && brandMatch) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            if (visibleCount === 0) {
+                showErrorPopup('No products match the selected filters');
+            } else {
+                showSuccessPopup(`Showing ${visibleCount} products`);
+            }
+        }
+        
+        // Apply price filter function
+        function applyPriceFilter() {
+            const minPrice = parseFloat(document.getElementById('min-price').value) || 0;
+            const maxPrice = parseFloat(document.getElementById('max-price').value) || Infinity;
+            
+            if (minPrice > maxPrice) {
+                showErrorPopup('Minimum price cannot be greater than maximum price');
+                return;
+            }
+            
+            filterByPrice(minPrice, maxPrice);
+        }
+        
+        // Handle product inquiry form
+        function handleProductInquiry(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const inquiryData = {
+                name: formData.get('customer-name'),
+                email: formData.get('customer-email'),
+                phone: formData.get('customer-phone'),
+                preference: formData.get('watch-preference'),
+                budget: formData.get('budget-range'),
+                message: formData.get('inquiry-message')
+            };
+            
+            // Simulate form submission
+            showSuccessPopup('Thank you for your inquiry! We will contact you within 24 hours.');
+            event.target.reset();
+        }
+    </script>
 </body>
 </html>
+

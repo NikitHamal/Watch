@@ -1,12 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for SEO and responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Chetana's Watch Store</title>
+    <meta name="description" content="Meet the team behind Chetana's Watch Store. Learn about our mission, values, and the passionate individuals dedicated to bringing you premium timepieces.">
+    <meta name="keywords" content="about us, team, watch store team, Chetana Malla, company information, mission, values">
+    <meta name="author" content="Chetana Malla">
+    
+    <!-- Page title -->
+    <title>About Us - Meet Our Team | Chetana's Watch Store</title>
+    
+    <!-- External CSS -->
     <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- Internal CSS for about page specific styles -->
+    <style>
+        /* About page specific internal CSS styles */
+        .about-header {
+            background: linear-gradient(135deg, #16a085 0%, #1abc9c 100%);
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+        }
+        
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .mission-section {
+            background: white;
+            margin: 2rem 0;
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .mission-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            border-top: 4px solid #1abc9c;
+            text-align: center;
+        }
+        
+        .mission-icon {
+            width: 60px;
+            height: 60px;
+            background: #1abc9c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 auto 1rem;
+        }
+        
+        .team-section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .team-member {
+            background: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .member-photo {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        
+        .member-info {
+            padding: 1.5rem;
+        }
+        
+        .member-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .member-role {
+            color: #1abc9c;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .member-bio {
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .member-skills {
+            margin-bottom: 1rem;
+        }
+        
+        .skill-tag {
+            display: inline-block;
+            background: #ecf0f1;
+            color: #2c3e50;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin: 0.2rem;
+        }
+        
+        .member-contact {
+            border-top: 1px solid #ddd;
+            padding-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .member-contact a {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+        
+        .member-contact a:hover {
+            text-decoration: underline;
+        }
+        
+        .company-stats {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 1rem;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1abc9c;
+            display: block;
+        }
+        
+        .values-section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .value-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: #1abc9c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin: 0 auto 1rem;
+        }
+        
+        .timeline {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        .timeline-year {
+            background: #1abc9c;
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+            font-weight: bold;
+            min-width: 80px;
+            text-align: center;
+            margin-right: 2rem;
+        }
+        
+        .timeline-content {
+            flex: 1;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #1abc9c;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .timeline-year {
+                margin-right: 0;
+                margin-bottom: 1rem;
+                align-self: center;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header with navigation -->
     <header>
         <nav class="container">
             <div class="logo">Chetana's Watch Store</div>
@@ -16,41 +276,455 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="../cart.html">Cart</a></li>
             </ul>
+            <button class="nav-toggle" style="display: none;">☰</button>
         </nav>
     </header>
 
+    <!-- Main content -->
     <main>
-        <section class="section">
+        <!-- About header -->
+        <section class="about-header">
             <div class="container">
-                <h1 class="section-title">About Chetana's Watch Store</h1>
-                <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                    <p>At Chetana's Watch Store, we believe that a timepiece is more than just an instrument to tell time—it's a statement of style, a symbol of craftsmanship, and a companion for life's most important moments. Our mission is to bring you the finest collection of watches while providing exceptional service and expertise.</p>
-                </div>
+                <h1>About Chetana's Watch Store</h1>
+                <p>Passionate about timepieces, dedicated to excellence, committed to your satisfaction</p>
             </div>
         </section>
 
-        <section class="section" style="background: #f8f9fa;">
-            <div class="container">
-                <h2 class="section-title">Meet Our Team</h2>
-                <div class="team-grid" style="display: flex; justify-content: center;">
-                    <div class="team-member" style="background: white; border-radius: 10px; padding: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                        <h3>Chetana Malla</h3>
-                        <p>Founder & CEO</p>
-                        <p>Passionate entrepreneur and watch enthusiast with a vision to make premium timepieces accessible to everyone. Currently pursuing Information Systems at Islington College, combining business acumen with technical expertise.</p>
+        <!-- About content -->
+        <section class="section">
+            <div class="about-container">
+                <!-- Mission and Vision -->
+                <div class="mission-section">
+                    <h2>Our Mission & Vision</h2>
+                    <p>At Chetana's Watch Store, we believe that a timepiece is more than just an instrument to tell time—it's a statement of style, a symbol of craftsmanship, and a companion for life's most important moments. Our mission is to bring you the finest collection of watches while providing exceptional service and expertise.</p>
+                    
+                    <div class="mission-grid">
+                        <div class="mission-card">
+                            <div class="mission-icon">🎯</div>
+                            <h3>Our Mission</h3>
+                            <p>To provide premium timepieces and exceptional customer service, making luxury accessible to watch enthusiasts across Nepal and beyond.</p>
+                        </div>
+                        
+                        <div class="mission-card">
+                            <div class="mission-icon">👁️</div>
+                            <h3>Our Vision</h3>
+                            <p>To become the most trusted and preferred destination for watch lovers, known for our expertise, authenticity, and commitment to excellence.</p>
+                        </div>
+                        
+                        <div class="mission-card">
+                            <div class="mission-icon">⭐</div>
+                            <h3>Our Promise</h3>
+                            <p>Every timepiece we offer is carefully selected for quality, authenticity, and value, backed by our comprehensive warranty and support.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Statistics -->
+                <div class="company-stats">
+                    <h2 style="text-align: center; margin-bottom: 2rem;">Our Journey in Numbers</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span>Years of Excellence</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10,000+</span>
+                            <span>Happy Customers</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span>Watch Models</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">25+</span>
+                            <span>Premium Brands</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">99%</span>
+                            <span>Customer Satisfaction</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span>Customer Support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Section -->
+                <div class="team-section">
+                    <h2>Meet Our Team</h2>
+                    <p>Our success is built on the passion and expertise of our dedicated team members. Each brings unique skills and perspectives to ensure we deliver the best possible experience for our customers.</p>
+                    
+                    <div class="team-grid">
+                        <!-- Team Member 1 - Chetana Malla -->
+                        <div class="team-member">
+                            <div class="member-photo">CM</div>
+                            <div class="member-info">
+                                <div class="member-name">Chetana Malla</div>
+                                <div class="member-role">Founder & CEO</div>
+                                <div class="member-bio">
+                                    Passionate entrepreneur and watch enthusiast with a vision to make premium timepieces accessible to everyone. Currently pursuing Information Systems at Islington College, combining business acumen with technical expertise.
+                                </div>
+                                <div class="member-skills">
+                                    <span class="skill-tag">Business Strategy</span>
+                                    <span class="skill-tag">E-commerce</span>
+                                    <span class="skill-tag">Customer Relations</span>
+                                    <span class="skill-tag">Watch Expertise</span>
+                                    <span class="skill-tag">Web Development</span>
+                                </div>
+                                <div class="member-contact">
+                                    <strong>Education:</strong> Information Systems, Islington College<br>
+                                    <strong>Email:</strong> <a href="mailto:chetana.malla@student.islington.edu.np">chetana.malla@student.islington.edu.np</a><br>
+                                    <strong>Phone:</strong> +977-9876543210
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Member 2 - Technical Lead -->
+                        <div class="team-member">
+                            <div class="member-photo">RK</div>
+                            <div class="member-info">
+                                <div class="member-name">Rajesh Kumar</div>
+                                <div class="member-role">Technical Lead & Web Developer</div>
+                                <div class="member-bio">
+                                    Experienced full-stack developer specializing in e-commerce solutions. Responsible for maintaining our website, implementing new features, and ensuring optimal user experience across all platforms.
+                                </div>
+                                <div class="member-skills">
+                                    <span class="skill-tag">HTML/CSS/JavaScript</span>
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">Database Design</span>
+                                    <span class="skill-tag">SEO</span>
+                                </div>
+                                <div class="member-contact">
+                                    <strong>Education:</strong> Computer Science, Tribhuvan University<br>
+                                    <strong>Experience:</strong> 7+ years in web development<br>
+                                    <strong>Certifications:</strong> AWS Certified Developer, Google Analytics
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Member 3 - Marketing Manager -->
+                        <div class="team-member">
+                            <div class="member-photo">SP</div>
+                            <div class="member-info">
+                                <div class="member-name">Sita Poudel</div>
+                                <div class="member-role">Marketing Manager</div>
+                                <div class="member-bio">
+                                    Creative marketing professional with expertise in digital marketing, brand management, and customer engagement. Drives our online presence and customer acquisition strategies.
+                                </div>
+                                <div class="member-skills">
+                                    <span class="skill-tag">Digital Marketing</span>
+                                    <span class="skill-tag">Social Media</span>
+                                    <span class="skill-tag">Content Creation</span>
+                                    <span class="skill-tag">Brand Management</span>
+                                    <span class="skill-tag">Analytics</span>
+                                </div>
+                                <div class="member-contact">
+                                    <strong>Education:</strong> Marketing, Kathmandu University<br>
+                                    <strong>Experience:</strong> 5+ years in digital marketing<br>
+                                    <strong>Certifications:</strong> Google Ads, Facebook Marketing
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Member 4 - Customer Service -->
+                        <div class="team-member">
+                            <div class="member-photo">AS</div>
+                            <div class="member-info">
+                                <div class="member-name">Arjun Shrestha</div>
+                                <div class="member-role">Customer Service Manager</div>
+                                <div class="member-bio">
+                                    Dedicated customer service professional ensuring every customer receives exceptional support. Manages our customer care team and maintains our high satisfaction standards.
+                                </div>
+                                <div class="member-skills">
+                                    <span class="skill-tag">Customer Support</span>
+                                    <span class="skill-tag">Problem Solving</span>
+                                    <span class="skill-tag">Communication</span>
+                                    <span class="skill-tag">Team Management</span>
+                                    <span class="skill-tag">CRM Systems</span>
+                                </div>
+                                <div class="member-contact">
+                                    <strong>Education:</strong> Business Administration, Pokhara University<br>
+                                    <strong>Experience:</strong> 6+ years in customer service<br>
+                                    <strong>Languages:</strong> Nepali, English, Hindi
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Member 5 - Watch Specialist -->
+                        <div class="team-member">
+                            <div class="member-photo">MG</div>
+                            <div class="member-info">
+                                <div class="member-name">Maya Gurung</div>
+                                <div class="member-role">Watch Specialist & Quality Assurance</div>
+                                <div class="member-bio">
+                                    Certified horologist with deep expertise in watch mechanisms, authentication, and quality control. Ensures every timepiece meets our strict quality standards.
+                                </div>
+                                <div class="member-skills">
+                                    <span class="skill-tag">Horology</span>
+                                    <span class="skill-tag">Watch Repair</span>
+                                    <span class="skill-tag">Authentication</span>
+                                    <span class="skill-tag">Quality Control</span>
+                                    <span class="skill-tag">Brand Knowledge</span>
+                                </div>
+                                <div class="member-contact">
+                                    <strong>Education:</strong> Certified Horologist, Swiss Watch Academy<br>
+                                    <strong>Experience:</strong> 10+ years in watch industry<br>
+                                    <strong>Certifications:</strong> Swiss Certified Watchmaker
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Member 6 - Operations Manager -->
+                        <div class="team-member">
+                            <div class="member-photo">BT</div>
+                            <div class="member-info">
+                                <div class="member-name">Bikash Tamang</div>
+                                <div class="member-role">Operations & Logistics Manager</div>
+                                <div class="member-bio">
+                                    Experienced operations manager overseeing inventory, logistics, and supply chain management. Ensures efficient operations and timely delivery of products.
+                                </div>
+                                <div class="member-skills">
+                                    <span class="skill-tag">Operations Management</span>
+                                    <span class="skill-tag">Supply Chain</span>
+                                    <span class="skill-tag">Inventory Control</span>
+                                    <span class="skill-tag">Logistics</span>
+                                    <span class="skill-tag">Process Optimization</span>
+                                </div>
+                                <div class="member-contact">
+                                    <strong>Education:</strong> Supply Chain Management, Nepal Commerce Campus<br>
+                                    <strong>Experience:</strong> 8+ years in operations<br>
+                                    <strong>Certifications:</strong> Lean Six Sigma Green Belt
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Values -->
+                <div class="values-section">
+                    <h2>Our Core Values</h2>
+                    <p>These values guide everything we do and shape our company culture:</p>
+                    
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <div class="value-icon">🏆</div>
+                            <h3>Excellence</h3>
+                            <p>We strive for excellence in every aspect of our business, from product selection to customer service.</p>
+                        </div>
+                        
+                        <div class="value-item">
+                            <div class="value-icon">🤝</div>
+                            <h3>Trust</h3>
+                            <p>Building lasting relationships through transparency, honesty, and reliable service.</p>
+                        </div>
+                        
+                        <div class="value-item">
+                            <div class="value-icon">💡</div>
+                            <h3>Innovation</h3>
+                            <p>Embracing new technologies and approaches to enhance customer experience.</p>
+                        </div>
+                        
+                        <div class="value-item">
+                            <div class="value-icon">🌟</div>
+                            <h3>Quality</h3>
+                            <p>Uncompromising commitment to offering only authentic, high-quality timepieces.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Timeline -->
+                <div class="timeline">
+                    <h2>Our Journey</h2>
+                    <p>From humble beginnings to becoming a trusted name in the watch industry:</p>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2020</div>
+                        <div class="timeline-content">
+                            <h3>The Beginning</h3>
+                            <p>Chetana's Watch Store was founded with a vision to make premium timepieces accessible to watch enthusiasts in Nepal. Started as a small online store with a curated selection of quality watches.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-content">
+                            <h3>First Milestone</h3>
+                            <p>Reached our first 1,000 customers and established partnerships with renowned watch brands. Launched our customer service center to provide better support.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2022</div>
+                        <div class="timeline-content">
+                            <h3>Expansion</h3>
+                            <p>Opened our first physical showroom in Kathmandu and expanded our team. Introduced watch repair and maintenance services.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-content">
+                            <h3>Digital Innovation</h3>
+                            <p>Launched our advanced e-commerce platform with enhanced features. Introduced virtual try-on technology and expanded to international shipping.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-content">
+                            <h3>Recognition</h3>
+                            <p>Received "Best E-commerce Platform" award and reached 10,000+ satisfied customers. Launched our smartwatch collection and sustainability initiatives.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-content">
+                            <h3>Future Vision</h3>
+                            <p>Continuing to innovate with AI-powered recommendations, expanded product lines, and enhanced customer experience. Planning regional expansion across South Asia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="team-section">
+                    <h2>Get in Touch</h2>
+                    <p>We'd love to hear from you! Whether you have questions about our products, need assistance, or want to share feedback, our team is here to help.</p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px;">
+                            <h4>Visit Our Store</h4>
+                            <p>New Road, Kathmandu, Nepal<br>
+                            Sunday - Friday: 10:00 AM - 8:00 PM<br>
+                            Saturday: 10:00 AM - 6:00 PM</p>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px;">
+                            <h4>Contact Information</h4>
+                            <p>Phone: +977-1-4567890<br>
+                            Email: info@chetanawatches.com.np<br>
+                            WhatsApp: +977-9876543210</p>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px;">
+                            <h4>Follow Us</h4>
+                            <p>Stay connected for latest updates:<br>
+                            Facebook: @ChetanaWatchStore<br>
+                            Instagram: @chetana_watches<br>
+                            LinkedIn: Chetana's Watch Store</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2025 Chetana's Watch Store. All rights reserved. | Designed by Chetana Malla</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                <!-- Inline CSS for footer links -->
+                <span style="color: #3498db;">Email:</span> chetana.malla@student.islington.edu.np | 
+                <span style="color: #3498db;">Phone:</span> +977-9876543210
+            </p>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="../js/script.js"></script>
+    
+    <!-- Additional inline JavaScript for about page functionality -->
+    <script>
+        // About page specific JavaScript functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate statistics on scroll
+            const statNumbers = document.querySelectorAll('.stat-number');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateStatNumber(entry.target);
+                    }
+                });
+            });
+            
+            statNumbers.forEach(stat => observer.observe(stat));
+            
+            // Team member card interactions
+            const teamMembers = document.querySelectorAll('.team-member');
+            teamMembers.forEach(member => {
+                member.addEventListener('click', function() {
+                    const memberName = this.querySelector('.member-name').textContent;
+                    const memberRole = this.querySelector('.member-role').textContent;
+                    showSuccessPopup(`Learn more about ${memberName} - ${memberRole}`);
+                });
+            });
+            
+            // Timeline animation
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const timelineObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeIn 0.6s ease forwards';
+                    }
+                });
+            });
+            
+            timelineItems.forEach(item => timelineObserver.observe(item));
+        });
+        
+        // Animate statistics numbers
+        function animateStatNumber(element) {
+            const text = element.textContent;
+            const number = parseInt(text.replace(/[^0-9]/g, ''));
+            const suffix = text.replace(/[0-9]/g, '');
+            
+            if (isNaN(number)) return;
+            
+            let currentNumber = 0;
+            const increment = number / 50;
+            
+            const timer = setInterval(() => {
+                currentNumber += increment;
+                if (currentNumber >= number) {
+                    element.textContent = number + suffix;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(currentNumber) + suffix;
+                }
+            }, 30);
+        }
+        
+        // Contact form functionality
+        function sendMessage(name, email, message) {
+            // Simulate sending message
+            showSuccessPopup(`Thank you ${name}! Your message has been sent. We'll get back to you soon.`);
+        }
+        
+        // Team member filter functionality
+        function filterTeamByRole(role) {
+            const teamMembers = document.querySelectorAll('.team-member');
+            teamMembers.forEach(member => {
+                const memberRole = member.querySelector('.member-role').textContent.toLowerCase();
+                if (role === 'all' || memberRole.includes(role.toLowerCase())) {
+                    member.style.display = 'block';
+                } else {
+                    member.style.display = 'none';
+                }
+            });
+        }
+        
+        // Add smooth scrolling to timeline
+        function scrollToYear(year) {
+            const timelineItem = document.querySelector(`[data-year="${year}"]`);
+            if (timelineItem) {
+                timelineItem.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
 </body>
 </html>
+

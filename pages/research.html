@@ -1,12 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for SEO and responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research - Chetana's Watch Store</title>
+    <meta name="description" content="Research and analysis comparing top e-commerce platforms. Comprehensive study of features, pricing, and functionality across leading online shopping platforms.">
+    <meta name="keywords" content="e-commerce research, platform comparison, online shopping analysis, Shopify vs Amazon, e-commerce study">
+    <meta name="author" content="Chetana Malla">
+    
+    <!-- Page title -->
+    <title>Research - E-commerce Platform Analysis | Chetana's Watch Store</title>
+    
+    <!-- External CSS -->
     <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- Internal CSS for research page specific styles -->
+    <style>
+        /* Research page specific internal CSS styles */
+        .research-header {
+            background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+        }
+        
+        .research-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .platform-comparison {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .platform-card {
+            background: #f8f9fa;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .platform-card:hover {
+            transform: translateY(-5px);
+            border-color: #3498db;
+        }
+        
+        .platform-logo {
+            width: 60px;
+            height: 60px;
+            background: #3498db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .platform-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .platform-type {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 0.3rem 0;
+            border-bottom: 1px solid #ecf0f1;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-score {
+            font-weight: bold;
+            color: #27ae60;
+        }
+        
+        .comparison-table {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+        
+        .analysis-section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .analysis-section h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+        
+        .pros, .cons {
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        
+        .pros {
+            background: #d5f4e6;
+            border-left: 4px solid #27ae60;
+        }
+        
+        .cons {
+            background: #fdeaea;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .pros h4, .cons h4 {
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+        
+        .rating-bar {
+            background: #ecf0f1;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 0.5rem 0;
+        }
+        
+        .rating-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #e74c3c 0%, #f39c12 50%, #27ae60 100%);
+            transition: width 0.3s ease;
+        }
+        
+        .methodology {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 4px solid #3498db;
+        }
+        
+        .key-findings {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .finding-item {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+            
+            .platform-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header with navigation -->
     <header>
         <nav class="container">
             <div class="logo">Chetana's Watch Store</div>
@@ -16,29 +212,517 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="../cart.html">Cart</a></li>
             </ul>
+            <button class="nav-toggle" style="display: none;">☰</button>
         </nav>
     </header>
 
+    <!-- Main content -->
     <main>
-        <section class="section">
+        <!-- Research header -->
+        <section class="research-header">
             <div class="container">
-                <h1 class="section-title">E-commerce Platform Research & Analysis</h1>
-                <div style="max-width: 800px; margin: 0 auto;">
+                <h1>E-commerce Platform Research & Analysis</h1>
+                <p>Comprehensive comparison of leading online shopping platforms and their impact on modern retail</p>
+            </div>
+        </section>
+
+        <!-- Research content -->
+        <section class="section">
+            <div class="research-container">
+                <!-- Introduction -->
+                <div class="analysis-section">
+                    <h2>Research Overview</h2>
                     <p>This comprehensive research analyzes and compares five leading e-commerce platforms to understand their strengths, weaknesses, and unique features. Our analysis focuses on user experience, functionality, pricing models, and overall effectiveness for different types of businesses.</p>
-                    <p>Our analysis is based on extensive research of platform documentation, user reviews, industry reports, and hands-on testing. We evaluated each platform across multiple criteria including ease of use, customization options, payment processing, mobile responsiveness, SEO capabilities, and customer support.</p>
+                    
+                    <div class="methodology">
+                        <h3>Research Methodology</h3>
+                        <p>Our analysis is based on extensive research of platform documentation, user reviews, industry reports, and hands-on testing. We evaluated each platform across multiple criteria including ease of use, customization options, payment processing, mobile responsiveness, SEO capabilities, and customer support.</p>
+                    </div>
+                </div>
+
+                <!-- Platform Comparison Grid -->
+                <div class="platform-comparison">
+                    <h2>Platform Comparison Overview</h2>
+                    <div class="platform-grid">
+                        <!-- Amazon -->
+                        <div class="platform-card">
+                            <div class="platform-logo" style="background: #ff9900;">AMZ</div>
+                            <div class="platform-name">Amazon</div>
+                            <div class="platform-type">Marketplace Platform</div>
+                            <ul class="feature-list">
+                                <li>User Base <span class="feature-score">9.5/10</span></li>
+                                <li>Trust Factor <span class="feature-score">9.8/10</span></li>
+                                <li>Ease of Setup <span class="feature-score">8.5/10</span></li>
+                                <li>Customization <span class="feature-score">6.0/10</span></li>
+                                <li>Fees <span class="feature-score">7.0/10</span></li>
+                                <li>Support <span class="feature-score">8.0/10</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Shopify -->
+                        <div class="platform-card">
+                            <div class="platform-logo" style="background: #96bf48;">SHO</div>
+                            <div class="platform-name">Shopify</div>
+                            <div class="platform-type">E-commerce Platform</div>
+                            <ul class="feature-list">
+                                <li>User Base <span class="feature-score">8.0/10</span></li>
+                                <li>Trust Factor <span class="feature-score">9.0/10</span></li>
+                                <li>Ease of Setup <span class="feature-score">9.5/10</span></li>
+                                <li>Customization <span class="feature-score">9.0/10</span></li>
+                                <li>Fees <span class="feature-score">8.0/10</span></li>
+                                <li>Support <span class="feature-score">9.5/10</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- eBay -->
+                        <div class="platform-card">
+                            <div class="platform-logo" style="background: #0064d2;">eBY</div>
+                            <div class="platform-name">eBay</div>
+                            <div class="platform-type">Auction & Marketplace</div>
+                            <ul class="feature-list">
+                                <li>User Base <span class="feature-score">8.5/10</span></li>
+                                <li>Trust Factor <span class="feature-score">8.0/10</span></li>
+                                <li>Ease of Setup <span class="feature-score">8.0/10</span></li>
+                                <li>Customization <span class="feature-score">6.5/10</span></li>
+                                <li>Fees <span class="feature-score">7.5/10</span></li>
+                                <li>Support <span class="feature-score">7.5/10</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- WooCommerce -->
+                        <div class="platform-card">
+                            <div class="platform-logo" style="background: #96588a;">WOO</div>
+                            <div class="platform-name">WooCommerce</div>
+                            <div class="platform-type">WordPress Plugin</div>
+                            <ul class="feature-list">
+                                <li>User Base <span class="feature-score">7.5/10</span></li>
+                                <li>Trust Factor <span class="feature-score">8.5/10</span></li>
+                                <li>Ease of Setup <span class="feature-score">7.0/10</span></li>
+                                <li>Customization <span class="feature-score">9.5/10</span></li>
+                                <li>Fees <span class="feature-score">9.0/10</span></li>
+                                <li>Support <span class="feature-score">7.0/10</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Etsy -->
+                        <div class="platform-card">
+                            <div class="platform-logo" style="background: #f56400;">ETS</div>
+                            <div class="platform-name">Etsy</div>
+                            <div class="platform-type">Handmade Marketplace</div>
+                            <ul class="feature-list">
+                                <li>User Base <span class="feature-score">7.0/10</span></li>
+                                <li>Trust Factor <span class="feature-score">8.5/10</span></li>
+                                <li>Ease of Setup <span class="feature-score">9.0/10</span></li>
+                                <li>Customization <span class="feature-score">5.5/10</span></li>
+                                <li>Fees <span class="feature-score">7.0/10</span></li>
+                                <li>Support <span class="feature-score">8.0/10</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailed Comparison Table -->
+                <div class="analysis-section">
+                    <h2>Detailed Feature Comparison</h2>
+                    <div class="comparison-table">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Amazon</th>
+                                    <th>Shopify</th>
+                                    <th>eBay</th>
+                                    <th>WooCommerce</th>
+                                    <th>Etsy</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monthly Fees</td>
+                                    <td>$39.99 (Pro)</td>
+                                    <td>$29+ /month</td>
+                                    <td>Free listing</td>
+                                    <td>Free (hosting req.)</td>
+                                    <td>$0.20 per listing</td>
+                                </tr>
+                                <tr>
+                                    <td>Transaction Fees</td>
+                                    <td>6-45% referral</td>
+                                    <td>2.4-2.9%</td>
+                                    <td>10-12.35%</td>
+                                    <td>Payment gateway</td>
+                                    <td>6.5% transaction</td>
+                                </tr>
+                                <tr>
+                                    <td>Design Flexibility</td>
+                                    <td>Limited</td>
+                                    <td>High</td>
+                                    <td>Limited</td>
+                                    <td>Very High</td>
+                                    <td>Limited</td>
+                                </tr>
+                                <tr>
+                                    <td>SEO Control</td>
+                                    <td>Limited</td>
+                                    <td>Good</td>
+                                    <td>Limited</td>
+                                    <td>Excellent</td>
+                                    <td>Limited</td>
+                                </tr>
+                                <tr>
+                                    <td>Mobile App</td>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                    <td>Via plugins</td>
+                                    <td>Yes</td>
+                                </tr>
+                                <tr>
+                                    <td>Payment Options</td>
+                                    <td>Amazon Pay</td>
+                                    <td>100+ gateways</td>
+                                    <td>PayPal, cards</td>
+                                    <td>All major</td>
+                                    <td>Etsy Payments</td>
+                                </tr>
+                                <tr>
+                                    <td>Inventory Management</td>
+                                    <td>Advanced</td>
+                                    <td>Good</td>
+                                    <td>Basic</td>
+                                    <td>Via plugins</td>
+                                    <td>Basic</td>
+                                </tr>
+                                <tr>
+                                    <td>Customer Support</td>
+                                    <td>24/7 phone/chat</td>
+                                    <td>24/7 chat/email</td>
+                                    <td>Community/email</td>
+                                    <td>Community</td>
+                                    <td>Email support</td>
+                                </tr>
+                                <tr>
+                                    <td>Best For</td>
+                                    <td>Large scale</td>
+                                    <td>All businesses</td>
+                                    <td>Auctions/used</td>
+                                    <td>Tech-savvy users</td>
+                                    <td>Handmade/vintage</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Individual Platform Analysis -->
+                <div class="analysis-section">
+                    <h2>Individual Platform Analysis</h2>
+                    
+                    <!-- Amazon Analysis -->
+                    <h3>Amazon - The E-commerce Giant</h3>
+                    <p>Amazon dominates the e-commerce landscape with its massive customer base and sophisticated logistics network. As a marketplace, it offers unparalleled reach but limited customization options.</p>
+                    
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4>Strengths</h4>
+                            <ul>
+                                <li>Massive customer base (300M+ active users)</li>
+                                <li>Prime membership benefits</li>
+                                <li>Advanced fulfillment (FBA)</li>
+                                <li>High conversion rates</li>
+                                <li>Global marketplace presence</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>Limitations</h4>
+                            <ul>
+                                <li>High competition among sellers</li>
+                                <li>Limited brand control</li>
+                                <li>Complex fee structure</li>
+                                <li>Strict seller policies</li>
+                                <li>Customer data ownership issues</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Shopify Analysis -->
+                    <h3>Shopify - The Complete E-commerce Solution</h3>
+                    <p>Shopify provides a comprehensive platform for building custom online stores with extensive design flexibility and powerful features for businesses of all sizes.</p>
+                    
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4>Strengths</h4>
+                            <ul>
+                                <li>User-friendly interface</li>
+                                <li>Extensive app ecosystem</li>
+                                <li>Professional themes</li>
+                                <li>Excellent customer support</li>
+                                <li>Scalable pricing plans</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>Limitations</h4>
+                            <ul>
+                                <li>Monthly subscription costs</li>
+                                <li>Transaction fees (non-Shopify payments)</li>
+                                <li>App dependency for advanced features</li>
+                                <li>Limited free themes</li>
+                                <li>Customization requires coding knowledge</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- eBay Analysis -->
+                    <h3>eBay - The Auction Pioneer</h3>
+                    <p>eBay revolutionized online selling with its auction format and remains a popular platform for both new and used items, offering unique selling opportunities.</p>
+                    
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4>Strengths</h4>
+                            <ul>
+                                <li>Auction and fixed-price options</li>
+                                <li>Global marketplace reach</li>
+                                <li>Lower entry barriers</li>
+                                <li>Strong buyer protection</li>
+                                <li>Established user base</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>Limitations</h4>
+                            <ul>
+                                <li>High final value fees</li>
+                                <li>Limited customization</li>
+                                <li>Complex seller policies</li>
+                                <li>Declining user engagement</li>
+                                <li>Limited marketing tools</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- WooCommerce Analysis -->
+                    <h3>WooCommerce - The WordPress Solution</h3>
+                    <p>WooCommerce offers maximum flexibility as a WordPress plugin, providing complete control over design and functionality for technically inclined users.</p>
+                    
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4>Strengths</h4>
+                            <ul>
+                                <li>Complete customization control</li>
+                                <li>No transaction fees</li>
+                                <li>Extensive plugin library</li>
+                                <li>SEO-friendly structure</li>
+                                <li>Cost-effective solution</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>Limitations</h4>
+                            <ul>
+                                <li>Requires technical knowledge</li>
+                                <li>Hosting and maintenance costs</li>
+                                <li>Security responsibilities</li>
+                                <li>Performance optimization needed</li>
+                                <li>Limited built-in support</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Etsy Analysis -->
+                    <h3>Etsy - The Creative Marketplace</h3>
+                    <p>Etsy specializes in handmade, vintage, and unique items, providing a niche marketplace for creative entrepreneurs and artisans.</p>
+                    
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4>Strengths</h4>
+                            <ul>
+                                <li>Targeted creative audience</li>
+                                <li>Easy setup process</li>
+                                <li>Built-in marketing tools</li>
+                                <li>Community support</li>
+                                <li>Mobile-friendly platform</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>Limitations</h4>
+                            <ul>
+                                <li>Limited to specific product types</li>
+                                <li>High competition in popular categories</li>
+                                <li>Limited customization options</li>
+                                <li>Dependency on Etsy's policies</li>
+                                <li>Transaction and listing fees</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Findings -->
+                <div class="key-findings">
+                    <h2>Key Research Findings</h2>
+                    
+                    <div class="finding-item">
+                        <h4>1. Platform Selection Depends on Business Model</h4>
+                        <p>The choice of e-commerce platform should align with your business model, technical expertise, and growth objectives. Marketplaces offer immediate access to customers but limit brand control, while standalone platforms provide more flexibility but require marketing investment.</p>
+                    </div>
+                    
+                    <div class="finding-item">
+                        <h4>2. Cost Structure Varies Significantly</h4>
+                        <p>Total cost of ownership includes not just platform fees but also payment processing, apps/plugins, themes, and marketing costs. WooCommerce appears cheapest but requires significant technical investment, while Shopify offers the best balance of features and cost.</p>
+                    </div>
+                    
+                    <div class="finding-item">
+                        <h4>3. Mobile Optimization is Critical</h4>
+                        <p>All platforms now prioritize mobile experience, but implementation quality varies. Shopify and Amazon lead in mobile conversion rates, while WooCommerce requires additional optimization efforts.</p>
+                    </div>
+                    
+                    <div class="finding-item">
+                        <h4>4. Customer Support Quality Matters</h4>
+                        <p>Platform support quality directly impacts business success. Shopify and Amazon provide superior support experiences, while open-source solutions rely heavily on community support.</p>
+                    </div>
+                    
+                    <div class="finding-item">
+                        <h4>5. Integration Capabilities Drive Efficiency</h4>
+                        <p>Modern e-commerce requires integration with various tools (CRM, email marketing, analytics). Shopify and WooCommerce offer the most extensive integration options, while marketplaces have more limited connectivity.</p>
+                    </div>
+                </div>
+
+                <!-- Recommendations -->
+                <div class="analysis-section">
+                    <h2>Platform Recommendations</h2>
+                    
+                    <div class="platform-grid">
+                        <div class="platform-card">
+                            <h4>For Beginners</h4>
+                            <p><strong>Recommended: Shopify</strong></p>
+                            <p>Offers the best balance of ease-of-use, features, and support for new e-commerce businesses.</p>
+                        </div>
+                        
+                        <div class="platform-card">
+                            <h4>For Large Scale</h4>
+                            <p><strong>Recommended: Amazon + Shopify</strong></p>
+                            <p>Use Amazon for reach and Shopify for brand building - a multi-channel approach.</p>
+                        </div>
+                        
+                        <div class="platform-card">
+                            <h4>For Developers</h4>
+                            <p><strong>Recommended: WooCommerce</strong></p>
+                            <p>Maximum customization and control for technically skilled users.</p>
+                        </div>
+                        
+                        <div class="platform-card">
+                            <h4>For Creatives</h4>
+                            <p><strong>Recommended: Etsy + Shopify</strong></p>
+                            <p>Start on Etsy for audience, then migrate to Shopify for growth.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conclusion -->
+                <div class="analysis-section">
+                    <h2>Research Conclusion</h2>
+                    <p>The e-commerce platform landscape offers diverse solutions for different business needs. Success depends not just on platform choice but on understanding your target audience, business model, and growth strategy. Our analysis shows that while no single platform is perfect for everyone, Shopify emerges as the most versatile solution for most businesses, offering the best combination of features, support, and scalability.</p>
+                    
+                    <p>For our watch store specifically, we chose to build on a custom HTML/CSS/JavaScript foundation to demonstrate technical capabilities while incorporating best practices learned from analyzing these leading platforms. This approach allows us to showcase both technical skills and understanding of e-commerce principles.</p>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2025 Chetana's Watch Store. All rights reserved. | Designed by Chetana Malla</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                <!-- Inline CSS for footer links -->
+                <span style="color: #3498db;">Email:</span> chetana.malla@student.islington.edu.np | 
+                <span style="color: #3498db;">Phone:</span> +977-9876543210
+            </p>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="../js/script.js"></script>
+    
+    <!-- Additional inline JavaScript for research page functionality -->
+    <script>
+        // Research page specific JavaScript functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate rating bars on scroll
+            const ratingBars = document.querySelectorAll('.rating-fill');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const score = entry.target.dataset.score || Math.random() * 100;
+                        entry.target.style.width = score + '%';
+                    }
+                });
+            });
+            
+            ratingBars.forEach(bar => observer.observe(bar));
+            
+            // Platform card hover effects
+            const platformCards = document.querySelectorAll('.platform-card');
+            platformCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+            
+            // Smooth scrolling for internal navigation
+            const internalLinks = document.querySelectorAll('a[href^="#"]');
+            internalLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+        
+        // Function to highlight platform differences
+        function highlightDifferences(platform1, platform2) {
+            const cards = document.querySelectorAll('.platform-card');
+            cards.forEach(card => {
+                const platformName = card.querySelector('.platform-name').textContent;
+                if (platformName === platform1 || platformName === platform2) {
+                    card.style.borderColor = '#e74c3c';
+                    card.style.borderWidth = '3px';
+                } else {
+                    card.style.borderColor = '#ddd';
+                    card.style.borderWidth = '2px';
+                }
+            });
+        }
+        
+        // Function to show platform details
+        function showPlatformDetails(platformName) {
+            const details = {
+                'Amazon': 'Marketplace giant with massive reach but limited customization',
+                'Shopify': 'Complete e-commerce solution with excellent balance of features',
+                'eBay': 'Auction-based platform ideal for unique and used items',
+                'WooCommerce': 'WordPress plugin offering maximum customization control',
+                'Etsy': 'Creative marketplace for handmade and vintage items'
+            };
+            
+            showSuccessPopup(details[platformName] || 'Platform information not available');
+        }
+        
+        // Add click handlers to platform cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const platformCards = document.querySelectorAll('.platform-card');
+            platformCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const platformName = this.querySelector('.platform-name').textContent;
+                    showPlatformDetails(platformName);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
+

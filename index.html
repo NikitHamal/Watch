@@ -1,12 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for SEO and responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chetana's Watch Store</title>
+    <meta name="description" content="Chetana's Watch Store - Premium collection of luxury, vintage, and modern watches. Quality timepieces for every occasion.">
+    <meta name="keywords" content="watches, luxury watches, vintage watches, smartwatches, timepieces, Nepal">
+    <meta name="author" content="Chetana Malla">
+    
+    <!-- Page title -->
+    <title>Chetana's Watch Store - Premium Timepieces Collection</title>
+    
+    <!-- External CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Internal CSS for homepage specific styles -->
+    <style>
+        /* Homepage specific internal CSS styles */
+        .featured-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 4rem 0;
+        }
+        
+        .stats-section {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-item {
+            padding: 1rem;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #3498db;
+            display: block;
+        }
+        
+        .testimonial-section {
+            background: white;
+            padding: 4rem 0;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .testimonial-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .newsletter-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .newsletter-form {
+            max-width: 500px;
+            margin: 2rem auto 0;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+        }
+        
+        .newsletter-btn {
+            background: #e74c3c;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .newsletter-btn:hover {
+            background: #c0392b;
+        }
+    </style>
 </head>
 <body>
+    <!-- Header with navigation -->
     <header>
         <nav class="container">
             <div class="logo">Chetana's Watch Store</div>
@@ -16,12 +115,14 @@
                 <li><a href="pages/blog.html">Blog</a></li>
                 <li><a href="pages/research.html">Research</a></li>
                 <li><a href="pages/about.html">About Us</a></li>
-                <li><a href="cart.html">Cart</a></li>
             </ul>
+            <button class="nav-toggle" style="display: none;">☰</button>
         </nav>
     </header>
 
+    <!-- Main content -->
     <main>
+        <!-- Hero section -->
         <section class="hero">
             <div class="hero-content">
                 <h1>Premium Timepieces Collection</h1>
@@ -30,46 +131,106 @@
             </div>
         </section>
 
-        <section class="featured-section section">
+        <!-- Featured products section -->
+        <section class="featured-section">
             <div class="container">
                 <h2 class="section-title">Featured Collections</h2>
                 <div class="product-grid">
+                    <!-- Luxury Watch Card -->
                     <div class="product-card" data-product-id="luxury-001">
                         <img src="images/luxury_collection.jpg" alt="Luxury Watch Collection" class="product-image">
                         <div class="product-info">
                             <h3 class="product-title">Luxury Collection</h3>
                             <p class="product-price">$2,499 <span class="original-price">$2,999</span></p>
                             <p>Exquisite craftsmanship meets timeless elegance in our premium luxury watch collection.</p>
-                            <button class="btn add-to-cart">Add to Cart</button>
-                            <button class="btn view-details">View Details</button>
+                            <button class="btn add-to-cart" style="margin-top: 1rem;">Add to Cart</button>
                         </div>
                     </div>
 
+                    <!-- Vintage Watch Card -->
                     <div class="product-card" data-product-id="vintage-001">
                         <img src="images/vintage_collection.jpg" alt="Vintage Watch Collection" class="product-image">
                         <div class="product-info">
                             <h3 class="product-title">Vintage Collection</h3>
                             <p class="product-price">$899 <span class="original-price">$1,199</span></p>
                             <p>Classic timepieces that tell stories of bygone eras with authentic vintage charm.</p>
-                            <button class="btn add-to-cart">Add to Cart</button>
-                            <button class="btn view-details">View Details</button>
+                            <button class="btn add-to-cart" style="margin-top: 1rem;">Add to Cart</button>
                         </div>
                     </div>
 
+                    <!-- Smart Watch Card -->
                     <div class="product-card" data-product-id="smart-001">
                         <img src="images/smartwatch_banner.jpg" alt="Smart Watch Collection" class="product-image">
                         <div class="product-info">
                             <h3 class="product-title">Smart Collection</h3>
                             <p class="product-price">$399 <span class="original-price">$499</span></p>
                             <p>Modern technology meets sophisticated design in our cutting-edge smartwatch series.</p>
-                            <button class="btn add-to-cart">Add to Cart</button>
-                            <button class="btn view-details">View Details</button>
+                            <button class="btn add-to-cart" style="margin-top: 1rem;">Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Statistics section -->
+        <section class="stats-section">
+            <div class="container">
+                <h2 class="section-title">Why Choose Us</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">10,000+</span>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <p>Watch Models</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">25+</span>
+                        <p>Premium Brands</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials section -->
+        <section class="testimonial-section">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p>"Exceptional quality and service! My luxury watch purchase exceeded all expectations. Highly recommended for serious watch enthusiasts."</p>
+                        <strong>- Rajesh Sharma, Kathmandu</strong>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"The vintage collection is absolutely stunning. Found the perfect timepiece that matches my style perfectly. Great customer support too!"</p>
+                        <strong>- Priya Thapa, Pokhara</strong>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Amazing smartwatch features and sleek design. The technology integration is seamless and the battery life is impressive."</p>
+                        <strong>- Amit Gurung, Lalitpur</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter subscription section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <h2>Stay Updated with Latest Collections</h2>
+                <p>Subscribe to our newsletter and be the first to know about new arrivals and exclusive offers</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact information section with table -->
         <section class="section">
             <div class="container">
                 <h2 class="section-title">Store Information</h2>
@@ -97,18 +258,81 @@
                             <td>Business Hours</td>
                             <td>Sunday - Friday: 10:00 AM - 8:00 PM</td>
                         </tr>
+                        <tr>
+                            <td>Warranty Period</td>
+                            <td>2 Years International Warranty</td>
+                        </tr>
+                        <tr>
+                            <td>Current Time</td>
+                            <td class="current-time">Loading...</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2025 Chetana's Watch Store. All rights reserved. | Designed by Chetana Malla</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                <!-- Inline CSS for footer links -->
+                <span style="color: #3498db;">Email:</span> chetana.malla@student.islington.edu.np | 
+                <span style="color: #3498db;">Phone:</span> +977-9876543210
+            </p>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
+    
+    <!-- Additional inline JavaScript for homepage specific functionality -->
+    <script>
+        // Homepage specific JavaScript functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Newsletter form submission
+            const newsletterForm = document.getElementById('newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = this.querySelector('.newsletter-input').value;
+                    subscribeNewsletter(email);
+                    this.reset();
+                });
+            }
+            
+            // Animate statistics on scroll
+            const statNumbers = document.querySelectorAll('.stat-number');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateNumber(entry.target);
+                    }
+                });
+            });
+            
+            statNumbers.forEach(stat => observer.observe(stat));
+        });
+        
+        // Animate numbers function
+        function animateNumber(element) {
+            const finalNumber = parseInt(element.textContent.replace(/[^0-9]/g, ''));
+            const suffix = element.textContent.replace(/[0-9]/g, '');
+            let currentNumber = 0;
+            const increment = finalNumber / 50;
+            
+            const timer = setInterval(() => {
+                currentNumber += increment;
+                if (currentNumber >= finalNumber) {
+                    element.textContent = finalNumber + suffix;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(currentNumber) + suffix;
+                }
+            }, 30);
+        }
+    </script>
 </body>
 </html>
+
