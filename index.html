@@ -4,12 +4,12 @@
     <!-- Meta tags for SEO and responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chetana's Watch Store - Premium collection of luxury, vintage, and modern watches. Quality timepieces for every occasion.">
+    <meta name="description" content="Watch Store - Premium collection of luxury, vintage, and modern watches. Quality timepieces for every occasion.">
     <meta name="keywords" content="watches, luxury watches, vintage watches, smartwatches, timepieces, Nepal">
     <meta name="author" content="Chetana Malla">
     
     <!-- Page title -->
-    <title>Chetana's Watch Store - Premium Timepieces Collection</title>
+    <title>Watch Store - Premium Timepieces Collection</title>
     
     <!-- External CSS -->
     <link rel="stylesheet" href="css/styles.css">
@@ -30,10 +30,11 @@
         }
         
         .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
             gap: 2rem;
             margin-top: 2rem;
+            justify-content: center;
         }
         
         .stat-item {
@@ -53,10 +54,11 @@
         }
         
         .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
             gap: 2rem;
             margin-top: 2rem;
+            justify-content: center;
         }
         
         .testimonial-card {
@@ -108,7 +110,7 @@
     <!-- Header with navigation -->
     <header>
         <nav class="container">
-            <div class="logo">Chetana's Watch Store</div>
+            <div class="logo">Watch Store</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="pages/products.html">Products</a></li>
@@ -141,7 +143,7 @@
                         <img src="images/luxury_collection.jpg" alt="Luxury Watch Collection" class="product-image">
                         <div class="product-info">
                             <h3 class="product-title">Luxury Collection</h3>
-                            <p class="product-price">$2,499 <span class="original-price">$2,999</span></p>
+                            <p class="product-price">Rs2,499 <span class="original-price">Rs2,999</span></p>
                             <p>Exquisite craftsmanship meets timeless elegance in our premium luxury watch collection.</p>
                             <button class="btn add-to-cart" style="margin-top: 1rem;">Add to Cart</button>
                         </div>
@@ -152,7 +154,7 @@
                         <img src="images/vintage_collection.jpg" alt="Vintage Watch Collection" class="product-image">
                         <div class="product-info">
                             <h3 class="product-title">Vintage Collection</h3>
-                            <p class="product-price">$899 <span class="original-price">$1,199</span></p>
+                            <p class="product-price">Rs899 <span class="original-price">Rs1,199</span></p>
                             <p>Classic timepieces that tell stories of bygone eras with authentic vintage charm.</p>
                             <button class="btn add-to-cart" style="margin-top: 1rem;">Add to Cart</button>
                         </div>
@@ -163,7 +165,7 @@
                         <img src="images/smartwatch_banner.jpg" alt="Smart Watch Collection" class="product-image">
                         <div class="product-info">
                             <h3 class="product-title">Smart Collection</h3>
-                            <p class="product-price">$399 <span class="original-price">$499</span></p>
+                            <p class="product-price">Rs399 <span class="original-price">Rs499</span></p>
                             <p>Modern technology meets sophisticated design in our cutting-edge smartwatch series.</p>
                             <button class="btn add-to-cart" style="margin-top: 1rem;">Add to Cart</button>
                         </div>
@@ -275,7 +277,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Chetana's Watch Store. All rights reserved. | Designed by Chetana Malla</p>
+            <p>&copy; 2025 Watch Store. All rights reserved. | Designed by Chetana Malla</p>
             <p style="margin-top: 0.5rem; font-size: 0.9rem;">
                 <!-- Inline CSS for footer links -->
                 <span style="color: #3498db;">Email:</span> chetana.malla@student.islington.edu.np | 
