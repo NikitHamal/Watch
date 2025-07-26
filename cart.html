@@ -48,7 +48,7 @@
                 <li><a href="pages/blog.html">Blog</a></li>
                 <li><a href="pages/research.html">Research</a></li>
                 <li><a href="pages/about.html">About Us</a></li>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a href="cart.html">Cart (<span class="cart-count">0</span>)</a></li>
             </ul>
         </nav>
     </header>
@@ -86,20 +86,20 @@
                     const itemElement = document.createElement('div');
                     itemElement.className = 'cart-item';
                     itemElement.innerHTML = `
-                        <img src="Rs{item.image}" alt="Rs{item.name}" class="cart-item-image">
+                        <img src="${item.image}" alt="${item.name}" class="cart-item-image">
                         <div class="cart-item-details">
-                            <h3>Rs{item.name}</h3>
-                            <p>Price: Rs{item.price}</p>
-                            <p>Quantity: Rs{item.quantity}</p>
+                            <h3>${item.name}</h3>
+                            <p>Price: ${item.price}</p>
+                            <p>Quantity: ${item.quantity}</p>
                         </div>
-                        <button class="cart-item-remove" data-index="Rs{index}">Remove</button>
+                        <button class="cart-item-remove" data-index="${index}">Remove</button>
                     `;
                     cartItemsContainer.appendChild(itemElement);
                     const price = parseFloat(item.price.replace(/[^0-9.-]+/g,""));
                     total += price * item.quantity;
                 });
 
-                cartTotalContainer.innerHTML = `<h3>Total: RsRs{total.toFixed(2)}</h3>`;
+                cartTotalContainer.innerHTML = `<h3>Total: Rs${total.toFixed(2)}</h3>`;
 
                 document.querySelectorAll('.cart-item-remove').forEach(button => {
                     button.addEventListener('click', (e) => {
