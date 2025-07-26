@@ -1,25 +1,26 @@
 # E-commerce Website Development Project Report
 ## Introduction to Information Systems - CC4057NI/CC4058NI
-### Watch Store: A Comprehensive E-commerce Solution
+### Watch Store: A Personal Journey into Online Retail
 
-**Student Name:** Chetana Malla  
-**Student ID:** [Student ID]  
-**Course:** Introduction to Information Systems (CC4057NI/CC4058NI)  
-**Institution:** Islington College  
-**Submission Date:** January 2025  
-**Academic Year:** 2024/25  
+Hi, I'm **Chetana Malla**, a final-year Information Systems student at Islington College. Over the past semester I've poured my curiosity for timepieces, design flair, and freshly learned coding skills into building **Watch Store**, a small but fully-functional e-commerce site for premium watches.
+
+This document tells the story of how that site came to life, what I learned, and where it can grow next.
 
 ---
 
 ## Executive Summary
 
-This project report presents the comprehensive development of "Watch Store," a fully functional e-commerce website designed to showcase premium timepieces and provide an exceptional online shopping experience. The project demonstrates practical application of information systems principles, web development technologies, and e-commerce best practices learned throughout the Introduction to Information Systems course.
+Watch Store began with a simple question: *could I create an online boutique that feels as welcoming as walking into a cosy watch showroom on New Road, Kathmandu?*  
+Over twelve weeks I sketched wireframes in my notebook, wrestled with CSS layouts, and cut countless lines of JavaScript until the answer felt like a confident **"yes."**
 
-The website serves as a digital storefront for a luxury watch retailer, incorporating modern web technologies including HTML5, CSS3, and JavaScript to create a responsive, user-friendly platform. The project encompasses five distinct pages: Home, Products, Blog, Research, and About Us, each designed to serve specific business functions while maintaining consistent branding and user experience.
+The finished site runs on plain HTML, CSS, and a sprinkle of vanilla JavaScript.  Visitors can browse curated collections, drop favourites into a cart, and read an in-depth blog post about technology's effect on horology all without the heavy lifting of frameworks or databases.  The project demonstrates:
 
-Key achievements of this project include the successful implementation of responsive design principles, integration of interactive JavaScript functionality, comprehensive e-commerce platform research, and creation of engaging content that demonstrates understanding of digital business concepts. The website effectively combines aesthetic appeal with functional design, ensuring accessibility across various devices and browsers.
+* clean, semantic markup that search engines and screen readers appreciate,
+* consistent branding across home, product, blog, research, and about pages,
+* a lightweight shopping cart stored locally in the browser, and
+* research-based decision making, from choosing currency (Rs) to analysing rival platforms.
 
-This report provides detailed documentation of the development process, technical implementation, challenges encountered, and solutions implemented. It serves as both a technical reference and a reflection on the learning outcomes achieved through practical application of information systems concepts in a real-world business context.
+Beyond the code, Watch Store has been my sandbox for applying classroom theory to something tangible: user-centred design, information flow, and the many trade-offs that shape real projects.  It isn't flawless nothing made by one student ever is but it captures a genuine learning journey and lays foundations I can proudly build on.
 
 
 
