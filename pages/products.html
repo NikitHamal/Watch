@@ -9,7 +9,7 @@
     <meta name="author" content="Chetana Malla">
     
     <!-- Page title -->
-    <title>Products - Chetana's Watch Store | Premium Watch Collection</title>
+    <title>Products - Watch Store | Premium Watch Collection</title>
     
     <!-- External CSS -->
     <link rel="stylesheet" href="../css/styles.css">
@@ -129,13 +129,14 @@
     <!-- Header with navigation -->
     <header>
         <nav class="container">
-            <div class="logo">Chetana's Watch Store</div>
+            <div class="logo">Watch Store</div>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="about.html">About Us</a></li>
+                <li><a href="../cart.html">Cart (<span class="cart-count">0</span>)</a></li>
             </ul>
             <button class="nav-toggle" style="display: none;">☰</button>
         </nav>
@@ -201,7 +202,7 @@
                         <div class="product-info">
                             <h3 class="product-title">Rolex Submariner Classic</h3>
                             <div class="rating-stars">★★★★★</div>
-                            <p class="product-price">$8,999 <span class="original-price">$9,999</span></p>
+                            <p class="product-price">Rs8,999 <span class="original-price">Rs9,999</span></p>
                             <p>Iconic diving watch with exceptional water resistance and timeless design. Swiss automatic movement with 48-hour power reserve.</p>
                             <div class="product-actions">
                                 <button class="btn add-to-cart">Add to Cart</button>
@@ -216,7 +217,7 @@
                         <div class="product-info">
                             <h3 class="product-title">Omega Speedmaster Vintage 1969</h3>
                             <div class="rating-stars">★★★★☆</div>
-                            <p class="product-price">$3,499 <span class="original-price">$3,999</span></p>
+                            <p class="product-price">Rs3,499 <span class="original-price">Rs3,999</span></p>
                             <p>Authentic vintage moonwatch with original caliber 861 movement. Collector's piece with documented history and provenance.</p>
                             <div class="product-actions">
                                 <button class="btn add-to-cart">Add to Cart</button>
@@ -232,7 +233,7 @@
                         <div class="product-info">
                             <h3 class="product-title">Apple Watch Ultra Series 9</h3>
                             <div class="rating-stars">★★★★★</div>
-                            <p class="product-price">$799 <span class="original-price">$899</span></p>
+                            <p class="product-price">Rs799 <span class="original-price">Rs899</span></p>
                             <p>Advanced health monitoring, GPS tracking, and cellular connectivity. Titanium case with Action Button and Digital Crown.</p>
                             <div class="product-actions">
                                 <button class="btn add-to-cart">Add to Cart</button>
@@ -247,7 +248,7 @@
                         <div class="product-info">
                             <h3 class="product-title">Casio G-Shock Mudmaster</h3>
                             <div class="rating-stars">★★★★☆</div>
-                            <p class="product-price">$299 <span class="original-price">$349</span></p>
+                            <p class="product-price">Rs299 <span class="original-price">Rs349</span></p>
                             <p>Rugged construction with mud resistance, solar power, and multi-band atomic timekeeping. Perfect for outdoor adventures.</p>
                             <div class="product-actions">
                                 <button class="btn add-to-cart">Add to Cart</button>
@@ -262,7 +263,7 @@
                         <div class="product-info">
                             <h3 class="product-title">Seiko Prospex Solar Elegance</h3>
                             <div class="rating-stars">★★★★★</div>
-                            <p class="product-price">$449 <span class="original-price">$549</span></p>
+                            <p class="product-price">Rs449 <span class="original-price">Rs549</span></p>
                             <p>Elegant solar-powered timepiece with mother-of-pearl dial and diamond hour markers. Water resistant to 100 meters.</p>
                             <div class="product-actions">
                                 <button class="btn add-to-cart">Add to Cart</button>
@@ -277,7 +278,7 @@
                         <div class="product-info">
                             <h3 class="product-title">Omega Seamaster Planet Ocean</h3>
                             <div class="rating-stars">★★★★★</div>
-                            <p class="product-price">$5,299 <span class="original-price">$5,799</span></p>
+                            <p class="product-price">Rs5,299 <span class="original-price">Rs5,799</span></p>
                             <p>Professional diving watch with Co-Axial Master Chronometer movement. Helium escape valve and ceramic bezel.</p>
                             <div class="product-actions">
                                 <button class="btn add-to-cart">Add to Cart</button>
@@ -397,11 +398,11 @@
                             <label for="budget-range">Budget Range</label>
                             <select id="budget-range" name="budget-range" required>
                                 <option value="">Select Budget</option>
-                                <option value="under-500">Under $500</option>
-                                <option value="500-1000">$500 - $1,000</option>
-                                <option value="1000-3000">$1,000 - $3,000</option>
-                                <option value="3000-5000">$3,000 - $5,000</option>
-                                <option value="above-5000">Above $5,000</option>
+                                <option value="under-500">Under Rs500</option>
+                                <option value="500-1000">Rs500 - Rs1,000</option>
+                                <option value="1000-3000">Rs1,000 - Rs3,000</option>
+                                <option value="3000-5000">Rs3,000 - Rs5,000</option>
+                                <option value="above-5000">Above Rs5,000</option>
                             </select>
                         </div>
                         
@@ -420,7 +421,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Chetana's Watch Store. All rights reserved. | Designed by Chetana Malla</p>
+            <p>&copy; 2025 Watch Store. All rights reserved. | Designed by Chetana Malla</p>
             <p style="margin-top: 0.5rem; font-size: 0.9rem;">
                 <!-- Inline CSS for footer links -->
                 <span style="color: #3498db;">Email:</span> chetana.malla@student.islington.edu.np | 
@@ -476,7 +477,7 @@
             if (visibleCount === 0) {
                 showErrorPopup('No products match the selected filters');
             } else {
-                showSuccessPopup(`Showing ${visibleCount} products`);
+                showSuccessPopup(`Showing Rs{visibleCount} products`);
             }
         }
         

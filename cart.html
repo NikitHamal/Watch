@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart - Chetana's Watch Store</title>
+    <title>Shopping Cart - Watch Store</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
         .cart-container {
@@ -41,14 +41,14 @@
 <body>
     <header>
         <nav class="container">
-            <div class="logo">Chetana's Watch Store</div>
+            <div class="logo">Watch Store</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="pages/products.html">Products</a></li>
                 <li><a href="pages/blog.html">Blog</a></li>
                 <li><a href="pages/research.html">Research</a></li>
                 <li><a href="pages/about.html">About Us</a></li>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a href="cart.html">Cart (<span class="cart-count">0</span>)</a></li>
             </ul>
         </nav>
     </header>
@@ -63,7 +63,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Chetana's Watch Store. All rights reserved. | Designed by Chetana Malla</p>
+            <p>&copy; 2025 Watch Store. All rights reserved. | Designed by Chetana Malla</p>
         </div>
     </footer>
 
@@ -99,7 +99,7 @@
                     total += price * item.quantity;
                 });
 
-                cartTotalContainer.innerHTML = `<h3>Total: $${total.toFixed(2)}</h3>`;
+                cartTotalContainer.innerHTML = `<h3>Total: Rs${total.toFixed(2)}</h3>`;
 
                 document.querySelectorAll('.cart-item-remove').forEach(button => {
                     button.addEventListener('click', (e) => {

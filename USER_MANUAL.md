@@ -1,4 +1,4 @@
-# Chetana's Watch Store - User Manual
+# Watch Store - User Manual
 
 ## Table of Contents
 1. [Getting Started](#getting-started)
@@ -12,7 +12,7 @@
 
 ## Getting Started
 
-Welcome to Chetana's Watch Store, your premier destination for luxury timepieces. This user manual will guide you through all the features and functionality of our website to help you find the perfect watch for your needs.
+Welcome to Watch Store, your premier destination for luxury timepieces. This user manual will guide you through all the features and functionality of our website to help you find the perfect watch for your needs.
 
 ### System Requirements
 - Modern web browser (Chrome, Firefox, Safari, or Edge)
@@ -246,5 +246,5 @@ We regularly update our website with:
 - Performance improvements
 - Enhanced features
 
-Thank you for choosing Chetana's Watch Store. We hope this manual helps you make the most of your browsing experience!
+Thank you for choosing Watch Store. We hope this manual helps you make the most of your browsing experience!
 
